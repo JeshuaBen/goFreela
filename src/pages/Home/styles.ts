@@ -89,3 +89,44 @@ export const FowardIcon = styled(IoArrowForward)`
   font-weight: 400;
   color: ${({ theme }) => theme.colors.white};
 `;
+
+export const ButtonLogin = styled.button`
+border: 0;
+  background-color: ${({ theme }) => theme.colors.purple400};
+  color: ${({ theme }) => theme.colors.white};
+  font-weight: bold;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  width: 199px;  
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%
+  
+  
+`;
+export const InputField = styled.input`
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+`;
+export const Form = styled.form`
+  background-color: #000; /* Cor de fundo preta */
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  
+`;
+
+
