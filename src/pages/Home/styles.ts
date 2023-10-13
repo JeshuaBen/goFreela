@@ -4,7 +4,6 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
-
   background-color: ${({ theme }) => theme.colors.black};
 `;
 
@@ -90,43 +89,113 @@ export const FowardIcon = styled(IoArrowForward)`
   color: ${({ theme }) => theme.colors.white};
 `;
 
-export const ButtonLogin = styled.button`
-border: 0;
-  background-color: ${({ theme }) => theme.colors.purple400};
-  color: ${({ theme }) => theme.colors.white};
-  font-weight: bold;
-  display: flex; 
+//Estes componentes são referente a LoginPage
+export const ContainerLogin = styled.div`
+display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 199px;  
-  height: 40px;
-  position: absolute;
-  top: 50%;
-  left: 50%
-  
-  
+  width: 100%;
+  height: 100vh;
+  background-color: ${({ theme }) => theme.colors.black};
 `;
-export const InputField = styled.input`
-  margin-bottom: 15px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  font-size: 16px;
 
-  &:last-child {
-    margin-bottom: 0;
+export const Text = styled.span`
+color: ${({ theme }) => theme.colors.white};
+  width: 263px;
+  height: 2px;
+  position: absolute;
+  top: 140px;
+  font-family: Outfit;
+  font-size: 22px;
+  font-weight: 600;
+
+`;
+
+export const ButtonWrapperLog = styled.div`
+  display: flex;
+  margin-bottom: 20px; 
+`;
+
+export const ButtonLoginFlut = styled.button`
+ background-color: #6A00BF;
+  color: ${({ theme }) => theme.colors.white};
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  width: 153px;
+  height: 46px;
+`;
+export const ButtonCadastrar = styled.button`
+ background-color: #000;
+  color: ${({ theme }) => theme.colors.white};
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  width: 153px;
+  height: 46px;
+`;
+
+export const InputField = styled.input`
+background-color: ${({ theme }) => theme.colors.black};
+padding: 10px;
+border: 1px solid #818181;
+border-radius: 12px;
+font-size:Outfit 16px;
+color: #818181; 
+width: 416px;
+`;
+
+
+export const ButtonLogin = styled.button`
+ background-color: #6A00BF;
+  color: ${({ theme }) => theme.colors.white};
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  width: 411px;
+  height: 40px;
+  margin-top: 20px; 
+`;
+
+//Estes componentes são referente a SingUpPage
+export const ButtonLoginSign= styled.button`
+ background-color: #000;
+  color: ${({ theme }) => theme.colors.white};
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  width: 153px;
+  height: 46px;
+`;
+export const ButtonCadastrarSign = styled.button`
+ background-color: #6A00BF;
+  color: ${({ theme }) => theme.colors.white};
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  width: 153px;
+  height: 46px;
+`;
+export const InputFieldSing = styled.input`
+background-color: ${({ theme }) => theme.colors.black};
+padding: 10px;
+border: 1px solid #818181;
+border-radius: 12px;
+font-size:Outfit 16px;
+color: #818181; 
+width: 216px;
+`;
+export const InputWrapper = styled.div`
+  display: flex;
+  gap: 20px; 
   }
 `;
-export const Form = styled.form`
-  background-color: #000; /* Cor de fundo preta */
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  
-`;
+
 
 

@@ -1,29 +1,57 @@
 
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
 ButtonLogin,
-Container,
+ContainerLogin,
 InputField,
-Form
+Text,
+ButtonLoginFlut,
+ButtonCadastrar,
+ButtonWrapperLog,
+
     
   } from "./styles";
 
 
 function LoginPage() {
 const [email, setEmail] = useState(""); // Estado para o email
- const [password, setPassword] = useState(""); // Estado para a senha
-  
- const handleLogin = () => {};
+const [password, setPassword] = useState(""); // Estado para a senha
+const [loginSuccess, setLoginSuccess] = useState(false);
+const navigate = useNavigate();
+
+
+ const handleLogin = () => {
       // Lógica de login
+      if (email && password) {
+        setLoginSuccess(true);
+        alert("Login efetuado com sucesso!")
+      }else{
+        alert("Preencha todos os campos");
+      }
+    };
+
+    
+
+      const handleCadastrar = () => {
+        navigate("/SignUpPage");
+      };
+
   return ( 
-    <Container>
-    <Form>
+    <ContainerLogin>
+      <Text>Fazer login na plataforma</Text>
+
+      <ButtonWrapperLog>
+      <ButtonLoginFlut>Login</ButtonLoginFlut> 
+      <ButtonCadastrar onClick={handleCadastrar}>Cadastre-se</ButtonCadastrar>
+      </ButtonWrapperLog>
+      <br/>
       <InputField
         type="text"
-        placeholder="Email"
+        placeholder="E-mail ou usuário"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-      />
+      /><br/>
       <InputField
         type="password"
         placeholder="Senha"
@@ -31,8 +59,9 @@ const [email, setEmail] = useState(""); // Estado para o email
         onChange={(e) => setPassword(e.target.value)}
       />
       <ButtonLogin onClick={handleLogin}>Entrar</ButtonLogin>
-    </Form>
-  </Container>
+      
+    
+  </ContainerLogin>
 
   );
  
