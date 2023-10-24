@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import {
   ContainerLogin,
   InputField,
-  Text,
+  //Text,
   ButtonLoginSign,
   ButtonCadastrarSign,
   ButtonWrapperLog,
@@ -33,7 +33,7 @@ function SignUpPage() {
   };
   return (
     <ContainerLogin>
-      <Text>Criar conta na plataforma</Text>
+      
 
       <ButtonWrapperLog>
         <ButtonLoginSign>Login</ButtonLoginSign>
