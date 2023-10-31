@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import {
   HeaderContainer,
   HeaderWrapper,
@@ -15,6 +16,10 @@ import {
 } from "./styles";
 
 export const Header: React.FC = () => {
+  const navigate = useNavigate();
+  const handleLoginClick = () => {
+    navigate("/LoginPage");
+  };
   return (
     <HeaderContainer>
       <HeaderWrapper>
@@ -29,9 +34,9 @@ export const Header: React.FC = () => {
         <MenuWrapper>
           <LoginWrapper>
             <Icon />
-            <Login>ENTRAR</Login>
+            <Login onClick={handleLoginClick} >ENTRAR</Login>
           </LoginWrapper>
-          <CreateAccount>CRIAR CONTA</CreateAccount>
+          <CreateAccount onClick={() => navigate("/SignUpPage")} >CRIAR CONTA</CreateAccount>
         </MenuWrapper>
       </HeaderWrapper>
     </HeaderContainer>
