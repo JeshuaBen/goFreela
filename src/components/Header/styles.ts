@@ -25,6 +25,7 @@ export const LogoWrapper = styled.div``;
 export const Logo = styled.span`
   font-size: 30px;
   color: ${({ theme }) => theme.colors.white};
+  cursor: pointer;
 `;
 export const NavigationContainer = styled.div`
   width: 35%;
@@ -85,4 +86,10 @@ export const CreateAccount = styled.button`
   &:hover {
     background-color: ${({ theme }) => theme.colors.purple400};
   }
+`;
+export const CreateAccountText = styled.div`
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-right: 10px;
 `;
